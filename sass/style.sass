@@ -1,0 +1,215 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+@import 'footer'
+@import 'modal'
+
+.main
+    background-image: url('../img/main.jpg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    position: relative
+    z-index: 1
+    margin-bottom: 80px
+    &::after
+        content: ''
+        display: inline-block
+        width: 100%
+        height: 100px
+        position: absolute
+        bottom: -50px
+        left: 0
+        background-image: url('../img/tile.svg')
+        background-repeat: repeat-x
+        background-position: bottom center
+        background-size: auto 100%
+
+    .container
+        padding: 160px 16px 100px
+        min-height: 100vh
+        z-index: unset
+
+    &__plane
+        // display: none
+        pointer-events: none
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 1
+        object-fit: cover
+        object-position: center center
+
+    h1
+        color: #fff
+        text-shadow: 3px 3px 0px #362FD9, 6px 6px 0px #000000
+        margin-bottom: 40px
+
+    &__text
+        position: absolute
+        top: 50%
+        max-width: 35%
+        padding: 30px 0 30px 100px
+        margin: 0
+        // z-index: 111
+        color: #fff
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            width: 70vw
+            left: -40%
+            height: 100%
+            background-color: $prime
+            z-index: -1
+
+    .features
+        text-align: right
+        max-width: 400px
+        margin: 0 0 0 auto
+        position: absolute
+        right: 10%
+        bottom: 15%
+        z-index: 111
+        &-item
+            background-color: #fff
+            padding: 10px 23px
+            display: inline-flex
+            justify-content: flex-start
+            text-align: left
+            align-items: center
+            max-width: 320px
+            margin: 0
+            &:first-child
+                position: relative
+                right: -40px
+                margin: 0 0 26px
+                box-shadow: 18px 19px 38px rgba(0, 0, 0, 0.25)
+
+        &__num
+            color: $prime
+            font-weight: 900
+            font-size: 78px
+            line-height: 106px
+            text-transform: uppercase
+            margin-right: 17px
+
+        &__heading
+            font-weight: 500
+            font-size: 16px
+            line-height: 150%
+            display: block
+
+        &__text
+            display: inline-block
+            font-size: 16px
+            line-height: 150%
+            max-width: 174px
+
+        .col
+            display: block
+
+        &__box
+            font-weight: 300
+            font-size: 12px
+            line-height: 150%
+            display: inline-block
+            padding: 3px 10px
+            background-color: rgba(0, 0, 0, 0.1)
+
+.about
+    .wrap
+        align-items: flex-start
+        .col
+            max-width: 45%
+            &:nth-child(2)
+                position: relative
+                z-index: 1
+                &::before
+                    content: ''
+                    display: inline-block
+                    width: 1px
+                    height: 70%
+                    transform: translateY(-50%)
+                    position: absolute
+                    top: 50%
+                    left: -60px
+                    z-index: 1
+                    background-color: $second
+
+    &-galery
+        max-width: 1920px
+        margin: 0 auto
+        text-align: center
+        display: flex
+        justify-content: center
+        gap: 15px
+        padding: 200px 0 120px
+        img
+            width: 19%
+            max-width: 322px
+            height: 541px
+            object-fit: cover
+            display: block
+            vertical-align: bottom
+            position: relative
+            &:nth-of-type(1)
+                top: -60px
+            &:nth-of-type(3)
+                top: -120px
+            &:nth-of-type(4)
+                top: -180px
+
+.photoshoot
+    h2
+        text-align: center
+        max-width: 420px
+
+    .slider
+        display: flex
+        overflow: hidden
+        position: relative
+        gap: 15px
+        &::before,
+        &::after
+            content: ''
+            display: block
+            width: 120%
+            height: 220px
+            position: absolute
+            left: -10%
+            top: -120px
+            z-index: 1
+            background-color: #fff
+            border-radius: 50%
+            pointer-events: none
+        &::after
+            top: auto
+            bottom: -120px
+
+        &-item
+            min-width: 500px
+            width: 500px
+            height: 900px
+
+    .zone
+        width: 330px
+        font-size: 16px
+        padding: 38px 25px
+        border-right: 1px solid rgba(0, 0, 0, .1)
+        margin: 0
+        &:last-child
+            border-right: none
+
+        &-wrap
+            align-items: stretch
+            justify-content: center
+            margin-bottom: 60px
+
+        &__headline
+            text-align: center
+            max-width: 300px
+            margin: 0 auto 50px

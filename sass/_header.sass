@@ -1,0 +1,83 @@
+header
+    padding: 13px 0 18px
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 1000
+    border-bottom: 1px solid rgba(255, 255, 255, .2)
+    transition: background-color ease .3s
+    backdrop-filter: blur(4.5px)
+    &.fixed
+        background-color: rgba(0, 0, 0, .3)
+
+    .container
+        z-index: unset
+        max-width: 1380px
+
+    .logo
+        width: 200px
+        display: inline-block
+        margin: 0
+
+    .phone
+        color: #fff
+        text-align: right
+        b
+            color: #fff
+
+    .nav
+        margin: 10px auto 0
+        list-style: none
+        a
+            display: inline-block
+            font-weight: 400
+            font-size: 20px
+            color: #fff
+            line-height: 120%
+            padding: 10px 15px 8px
+            // text-transform: uppercase
+            &:hover
+                opacity: 1
+                color: #000
+                background-color: $yelow
+
+    .phone
+        margin-top: 10px
+
+    .btn
+        padding: 16px 30px 15px
+        margin: 0 0 0 36px
+        min-width: unset
+        background-color: transparent
+        border: 2px solid #fff
+        font-size: 18px
+        &-menu
+            display: none
+
+    @media screen and ( max-width: 1200px )
+        padding: 22px 0
+        border-bottom: 1px solid rgba(255, 255, 255, .20)
+        &::before
+            width: 100%
+
+        .nav
+            display: none
+
+        .phone
+            margin: 0 30px 0 auto
+
+        .btn
+            display: none
+            &-menu
+                display: inline-block
+                z-index: 9999999
+
+    @media screen and ( max-width: 700px )
+        padding: 16px 0
+        .logo
+            max-width: 160px
+            margin: 0
+
+        .phone
+            display: none
