@@ -26,7 +26,7 @@
         background-size: auto 100%
 
     .container
-        padding: 160px 16px 100px
+        padding: 17vh 16px 100px
         min-height: 100vh
         z-index: unset
 
@@ -44,13 +44,14 @@
 
     h1
         color: #fff
-        text-shadow: 3px 3px 0px #362FD9, 6px 6px 0px #000000
+        max-width: 85%
+        text-shadow: 3px 3px 0px $prime, 5px 5px 0px #000000
         margin-bottom: 40px
 
     &__text
         position: absolute
         top: 50%
-        max-width: 35%
+        max-width: 32%
         padding: 30px 0 30px 100px
         margin: 0
         // z-index: 111
@@ -90,8 +91,9 @@
                 box-shadow: 18px 19px 38px rgba(0, 0, 0, 0.25)
 
         &__num
+            font-family: 'Noto Serif', serif
+            font-weight: 700
             color: $prime
-            font-weight: 900
             font-size: 78px
             line-height: 106px
             text-transform: uppercase
@@ -105,9 +107,8 @@
 
         &__text
             display: inline-block
-            font-size: 16px
-            line-height: 150%
-            max-width: 174px
+            font-size: 15px
+            line-height: 130%
 
         .col
             display: block
@@ -118,6 +119,7 @@
             line-height: 150%
             display: inline-block
             padding: 3px 10px
+            margin-bottom: 3px
             background-color: rgba(0, 0, 0, 0.1)
 
 .about
@@ -146,12 +148,11 @@
         text-align: center
         display: flex
         justify-content: center
-        gap: 15px
+        gap: 1%
         padding: 200px 0 120px
         img
             width: 19%
-            max-width: 322px
-            height: 541px
+            // height: 550px
             object-fit: cover
             display: block
             vertical-align: bottom
@@ -163,10 +164,71 @@
             &:nth-of-type(4)
                 top: -180px
 
+.teaching
+    background-image: url('../img/planes.jpg')
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: cover
+    padding: 130px 0
+    .col
+        max-width: 60%
+        align-items: flex-start
+        &:first-child
+            color: #fff
+            max-width: 32%
+
+    .box
+        width: 49%
+        padding: 40px 35px 30px
+        background-color: #fff
+        margin: 0 0 20px
+        p
+            display: flex
+            align-items: center
+            margin: 0 0 10px
+            img
+                width: 50px
+                margin-right: 20px
+
+    form
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, .2)
+        .btn
+            width: 100%
+            margin-bottom: 10px
+
+    .item
+        display: flex
+        align-items: center
+        padding: 10px
+        border-bottom: 1px solid #fff
+        img
+            width: 90px
+            min-width: 90px
+            display: inline-block
+            margin-right: 20px
+
+        &__num
+            min-width: 90px
+            width: 90px
+            text-align: center
+            font-size: 78px
+            line-height: 106px
+            text-transform: uppercase
+            font-weight: bold
+            margin-right: 20px
+        &__text
+            font-weight: 600
+            i
+                font-weight: normal
+                font-style: normal
+                display: block
+                font-size: 12px
+                line-height: 140%
+
 .photoshoot
     h2
         text-align: center
-        max-width: 420px
+        max-width: 450px
 
     .slider
         display: flex
@@ -207,9 +269,58 @@
         &-wrap
             align-items: stretch
             justify-content: center
-            margin-bottom: 60px
+            margin-bottom: 70px
 
         &__headline
             text-align: center
-            max-width: 300px
-            margin: 0 auto 50px
+            margin: 0 auto 40px
+
+    .wrap
+        .col
+            max-width: 58%
+            &:first-child
+                max-width: 38%
+            &.wrap
+                align-items: stretch
+
+    form
+        width: 49%
+        padding: 35px 30px
+        background-color: rgba(0, 0, 0, .1)
+        h4
+            margin-bottom: 14px 
+        i
+            display: block
+            font-weight: 400
+            font-size: 12px
+            line-height: 150%
+            margin-bottom: 24px
+
+        &:first-child
+            color: #fff
+            background-color: $prime
+            input
+                background-color: transparent
+                border-color: #fff
+                color: #fff
+                &::placeholder
+                    color: #fff
+
+            .btn
+                margin-bottom: 24px
+
+            i
+                margin-bottom: 0
+
+@media screen and ( max-width: 1500px )
+    .main
+        .container
+            padding-top: 18vh
+
+        &__text
+            padding: 15px 15px 15px 40px
+
+    .photoshoot
+        .zone
+            &-wrap
+                max-width: 1300px

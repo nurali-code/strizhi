@@ -19,10 +19,10 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 500) {
 
-            $("header").addClass('fixed');
+            // $("header").addClass('fixed');
             $(".scroll-up").fadeIn(300);
         } else {
-            $("header").removeClass('fixed');
+            // $("header").removeClass('fixed');
             $(".scroll-up").fadeOut(300);
         }
     });
