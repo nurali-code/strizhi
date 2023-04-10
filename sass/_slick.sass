@@ -96,26 +96,27 @@
     &-arrow
         width: 50px
         height: 50px
-        background-color: transparent
+        background-color: $prime
         color: transparent
         position: absolute
         top: 50%
         margin-top: -30px
-        z-index: 10000
+        z-index: 100
         border: none
         background-image: url('../img/slider-arrow.svg')
         background-repeat: no-repeat
         background-position: center center
         background-size: contain
+        border-radius: 50%
 
         &::before
             display: none
     &-prev
-        left: -50px
+        left: calc((100% - 1300px)/2)
         transform: scale(-1) !important
 
     &-next
-        right: -50px
+        right: calc((100% - 1300px)/2)
 
     &-disabled
         cursor: no-drop

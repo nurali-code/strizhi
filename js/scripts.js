@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    AOS.init({
-        duration: 1000,
-        offset: 100,
-    });
+    // AOS.init({
+    //     duration: 1000,
+    //     offset: 100,
+    // });
     /*---------------------------------------------------end*/
 
     $('a[href*="#"]').on('click', function (e) {
@@ -32,6 +32,18 @@ $(document).ready(function () {
         $('.modal').fadeOut();
         $('.modal, body, [data-modal]').removeClass('active');
     };
+    /*---------------------------------------------------end*/
+    $('.slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        swipeToSlide: true,
+        centerMode: true,
+        slidesToScroll: 1,
+        variableWidth: true,
+    });
     /*---------------------------------------------------end*/
 
     $(function () {

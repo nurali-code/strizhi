@@ -1,6 +1,7 @@
 @import 'normolize'
 @import 'elements'
 @import 'header'
+@import 'slick'
 @import 'footer'
 @import 'modal'
 
@@ -27,7 +28,9 @@
 
     .container
         padding: 17vh 16px 100px
-        min-height: 100vh
+        min-height: 800px
+        height: 100vh
+        max-height: 1080px
         z-index: unset
 
     &__plane
@@ -61,7 +64,7 @@
             display: block
             position: absolute
             top: 0
-            width: 70vw
+            width: 74vw
             left: -40%
             height: 100%
             background-color: $prime
@@ -226,15 +229,14 @@
                 line-height: 140%
 
 .photoshoot
+    overflow: hidden
     h2
         text-align: center
         max-width: 450px
 
     .slider
-        display: flex
         overflow: hidden
         position: relative
-        gap: 15px
         &::before,
         &::after
             content: ''
@@ -256,6 +258,8 @@
             min-width: 500px
             width: 500px
             height: 900px
+            max-height: 115vh
+            margin: 0 7px
 
     .zone
         width: 330px
@@ -318,7 +322,7 @@
             padding-top: 18vh
 
         &__text
-            padding: 15px 15px 15px 40px
+            padding: 30px 15px 30px 40px
 
     .photoshoot
         .zone
