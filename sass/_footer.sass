@@ -38,6 +38,9 @@ footer
 
     form
         position: relative
+        margin-bottom: 14px
+        input
+            border-color: rgba(0, 0, 0, .3)
         .btn
             position: absolute
             right: 0
@@ -47,6 +50,10 @@ footer
             min-width: unset
             width: 55px
             z-index: 10
+            background-image: url('../img/slider-arrow.svg')
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 50%
 
     .col
         max-width: 320px
@@ -57,7 +64,7 @@ footer
             font-style: normal
             font-weight: 400
             font-size: 12px
-            line-height: 16px
+            line-height: 140%
             display: block
             max-width: 240px
         &.pop
@@ -92,8 +99,20 @@ footer
         b 
             color: #fff
 
+    @media screen and ( max-width: 1340px )
+        .address
+            left: 32px
+
     @media screen and ( max-width: 1200px )
-        .col
+        .container
+            padding-bottom: 0
+            max-width: 400px
+            .col 
+                margin-bottom: 70px
+                &:first-child
+                    top: 0
+                    width: 100%
+                    max-width: 100%
 
     @media screen and ( max-width: 700px )
         .col

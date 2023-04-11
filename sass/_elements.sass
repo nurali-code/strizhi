@@ -36,8 +36,7 @@ h1
     line-height: 124px
     text-transform: uppercase
 h2
-    font-weight: 800
-    font-size: 48px
+    font-size: 54px
     line-height: 130%
     margin-bottom: 33px
 
@@ -94,7 +93,7 @@ section
 
 .btn
     font-weight: 600
-    font-size: 20px
+    font-size: 18px
     line-height: 130%
     text-transform: uppercase
     display: inline-block
@@ -113,15 +112,13 @@ section
         width: 50px
         height: 45px
         margin: 0
-        background-color: $prime
-        box-shadow: 0px 5px 27px -10px $prime
         span
             position: absolute
             top: 50%
             left: 20%
             margin-top: -2px
             display: block
-            width: 60%
+            width: 80%
             height: 2px
             transition: all ease .3s
             border-radius: 2px
@@ -130,16 +127,18 @@ section
             &::after
                 content: ''
                 display: block
-                width: 100%
+                width: 60%
                 height: 2px
                 background-color: #fff
                 position: absolute
                 top: 10px
-                left: 0
+                right: 0
                 transition: all ease .3s
                 border-radius: 2px
             &::after
                 top: -10px
+                width: 100%
+                left: 0
 
         &.active
             span
@@ -149,6 +148,7 @@ section
                 background-color: #fff
                 &::before
                     top: 50%
+                    width: 100%
                     left: 50%
                     transform: translate(-50%, -50%) rotate(-90deg)
                     background-color: #fff
@@ -157,7 +157,12 @@ section
 
     &.white
         background-color: #fff
-        color: $prime
+        color: $black
+        box-shadow: none !important
+    &.black
+        background-color: #000
+        color: #fff
+        box-shadow: none !important
 
     &:hover
         opacity: 1
@@ -356,7 +361,7 @@ textarea
         line-height: 130%
 
     h2
-        font-size: 30px
+        font-size: 44px
 
     .phone
         span
@@ -364,25 +369,23 @@ textarea
         b
             font-size: 20px
 
-    .btn 
+    .btn
         font-size: 16px
-
 
     p, li
         font-size: 16px
         margin-bottom: 30px
 
-@media screen and ( max-width: 1200px )
+@media screen and ( max-width: 1100px )
 
     h1
-        font-size: 65px
+        font-size: 55px
 
     h3
         font-size: 26px
 
     h4
         font-size: 20px
-
 
     section
         padding: 60px 0
@@ -392,18 +395,19 @@ textarea
 
     .btn
         min-width: 180px
-        font-size: 18px
+        font-size: 14px
         padding: 20px 24px 19px
         min-width: 200px
 
-
 @media screen and ( max-width: 900px )
     h1
-        font-size: 36px
+        // font-size: 36px
 
 @media screen and ( max-width: 700px )
+    .container 
+        padding: 0 16px
     h1
-        font-size: 31px
+        // font-size: 31px
 
     h2
         font-size: 26px
@@ -432,7 +436,6 @@ textarea
                     top: -8px
                 &::after
                     top: 8px
-
 
     input,
     textarea,

@@ -94,8 +94,8 @@
         display: none
 
     &-arrow
-        width: 50px
-        height: 50px
+        width: 75px
+        height: 75px
         background-color: $prime
         color: transparent
         position: absolute
@@ -106,7 +106,7 @@
         background-image: url('../img/slider-arrow.svg')
         background-repeat: no-repeat
         background-position: center center
-        background-size: contain
+        background-size: 60%
         border-radius: 50%
 
         &::before
@@ -155,12 +155,17 @@
             button
                 background-color: #fff
 
-    @media screen and ( max-width: 1200px )
+    @media screen and ( max-width: 1300px )
         &-arrow 
-            width: 20px
-            height: 20px
+            width: 40px
+            height: 40px
+        
         &-prev 
-            left: -15px
+            left: 16px
         
         &-next 
-            right: -15px
+            right: 16px
+
+    @media screen and ( max-width: 700px )
+        &-prev 
+            display: none

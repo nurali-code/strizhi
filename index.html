@@ -48,7 +48,10 @@
         <div class="container">
             <h1>Лётная школа Аэродром «Стрижи»</h1>
         </div>
-        <img src="./img/plane.png" class="main__plane" alt="plane">
+        <picture>
+            <source type="image/webp" srcset="./img/plane.webp">
+            <img src="./img/plane.png" class="main__plane" alt="Cession 182" loading="lazy">
+        </picture>
         <p class="main__text">
             Аэродром «Стрижи» - это место, где вы можете погрузиться в мир авиации и раскрыть свой потенциал в нем.
             Наша миссия - популяризация авиации и предоставление возможностей для тех, кто хочет познакомиться с ней
@@ -56,22 +59,23 @@
         </p>
         <div class="features">
             <p class="features-item">
+                <span class="features__num">10</span>
+                <span class="col">
+                    <span class="features__heading">Самолетов</span>
+                    <span class="features__box">ЯК-52</span>
+                    <span class="features__box">Технам</span>
+                    <span class="features__box">Remus</span>
+                    <span class="features__box">Cession 182</span>
+                </span>
+            </p>
+            <p class="features-item">
                 <span class="features__num">3</span>
                 <span class="col">
                     <span class="features__heading">Месяца</span>
                     <span class="features__text">до получения свидетельства частного пилота</span>
                 </span>
             </p>
-            <p class="features-item">
-                <span class="features__num">10</span>
-                <span class="col">
-                    <span class="features__heading">Самолетов</span>
-                    <span class="features__box">Remus</span>
-                    <span class="features__box">Cession 182</span>
-                    <span class="features__box">ЯК-52</span>
-                    <span class="features__box">Технам</span>
-                </span>
-            </p>
+
         </div>
     </main>
 
@@ -91,11 +95,11 @@
             </div>
         </div>
         <div class="about-galery">
-            <img src="img/about-1.jpg" alt="img">
-            <img src="img/about-2.jpg" alt="img">
-            <img src="img/about-3.jpg" alt="img">
-            <img src="img/about-4.jpg" alt="img">
-            <img src="img/about-5.jpg" alt="img">
+            <img loading="lazy" src="img/about-1.jpg" alt="img">
+            <img loading="lazy" src="img/about-2.jpg" alt="img">
+            <img loading="lazy" src="img/about-3.jpg" alt="img">
+            <img loading="lazy" src="img/about-4.jpg" alt="img">
+            <img loading="lazy" src="img/about-5.jpg" alt="img">
         </div>
         <div class="container wrap">
             <p class="col">
@@ -174,23 +178,27 @@
                     </p>
                 </div>
                 <form class="box">
-                    <h3>Подать завку на обучение</h3>
+                    <h3>Подать завку <br> на обучение</h3>
                     <input type="text" required placeholder="Ваше имя">
                     <input type="tel" required placeholder="Номер телефона">
-                    <button type="submit" class="btn">подать заявку</button>
+                    <button type="submit" class="btn white">подать заявку</button>
                 </form>
             </div>
         </div>
+        <picture>
+            <source srcset="./img/planes.jpg" media="(min-width: 1200px)">
+            <img class="bg" src="./img/planes-mob.jpg" alt="Обучение пилотов" loading="lazy">
+        </picture>
     </section>
 
     <section class="photoshoot" id="photoshoot">
         <h2 class="container">Фотосессия В Аэродромe</h2>
-        
+
         <div class="slider">
-            <div class="slider-item"><img src="img/slide-1.jpg" alt="img"></div>
-            <div class="slider-item"><img src="img/slide-2.jpg" alt="img"></div>
-            <div class="slider-item"><img src="img/slide-3.jpg" alt="img"></div>
-            <div class="slider-item"><img src="img/slide-4.jpg" alt="img"></div>
+            <div class="slider-item"><img loading="lazy" src="img/slide-1.jpg" alt="img"></div>
+            <div class="slider-item"><img loading="lazy" src="img/slide-2.jpg" alt="img"></div>
+            <div class="slider-item"><img loading="lazy" src="img/slide-3.jpg" alt="img"></div>
+            <div class="slider-item"><img loading="lazy" src="img/slide-4.jpg" alt="img"></div>
         </div>
 
         <h3 class="zone__headline">Фотозоны аэродрома</h3>
@@ -275,7 +283,7 @@
                     </i>
                     <input type="text" required placeholder="Ваше имя">
                     <input type="tel" required placeholder="Номер телефона">
-                    <button type="submit" class="btn">Отменить</button>
+                    <button type="submit" class="btn black">Отменить</button>
                 </form>
 
             </div>
@@ -291,7 +299,7 @@
                 Примерно в 2,8 км по направлению на юго-востоке от ориентира п. Сибирские Огни.
             </address>
         </div>
-        <iframe src="" width="500" height="400"></iframe>
+        <iframe loading="lazy" src="" width="500" height="400"></iframe>
         <div class="container wrap">
             <div class="col">
                 <a href="#main" class="logo">
