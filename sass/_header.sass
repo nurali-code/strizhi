@@ -89,7 +89,8 @@ header
             visibility: hidden
             transform: translateX(-100%)
             opacity: 0
-            transition: all .5s cubic-bezier(0.4, -0.02, 0, 0.96) 
+            transition: all .5s cubic-bezier(0.4, -0.02, 0, 0.96)
+            box-shadow: 250px 0 0 450px rgba(0, 0, 0, .5)
             li
                 padding: 0
 
@@ -123,8 +124,8 @@ header
                 display: inline-block
                 z-index: 9999999
 
-        &.active 
-            .nav 
+        &.active
+            .nav
                 visibility: visible
                 transform: translateX(0)
                 opacity: 1
@@ -162,3 +163,4 @@ header
         .btn
             &-menu
                 margin-top: 4px
+

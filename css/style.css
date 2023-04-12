@@ -344,7 +344,7 @@ section {
   margin-top: -2px;
   display: block;
   width: 80%;
-  height: 2px;
+  height: 1.4px;
   -webkit-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
@@ -358,7 +358,7 @@ section {
   content: "";
   display: block;
   width: 60%;
-  height: 2px;
+  height: 1px;
   background-color: #fff;
   position: absolute;
   top: 10px;
@@ -817,8 +817,8 @@ textarea {
     font-size: 16px;
   }
   .btn-menu {
-    width: 41px;
-    height: 36px;
+    width: 40px;
+    height: 30px;
   }
   .btn-menu span {
     width: 100%;
@@ -956,6 +956,9 @@ header .btn-menu {
     -o-transition: all 0.5s cubic-bezier(0.4, -0.02, 0, 0.96);
     -moz-transition: all 0.5s cubic-bezier(0.4, -0.02, 0, 0.96);
     transition: all 0.5s cubic-bezier(0.4, -0.02, 0, 0.96);
+    -webkit-box-shadow: 250px 0 0 450px rgba(0, 0, 0, 0.5);
+       -moz-box-shadow: 250px 0 0 450px rgba(0, 0, 0, 0.5);
+            box-shadow: 250px 0 0 450px rgba(0, 0, 0, 0.5);
   }
   header .nav li {
     padding: 0;
@@ -1923,22 +1926,25 @@ footer .phone b {
   gap: 1%;
   padding: 200px 0 120px;
 }
-.about-galery img {
+.about-galery a {
   width: 19%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
-  vertical-align: bottom;
+  display: inline-block;
   position: relative;
 }
-.about-galery img:nth-of-type(1) {
+.about-galery a:nth-of-type(1) {
   top: -60px;
 }
-.about-galery img:nth-of-type(3) {
+.about-galery a:nth-of-type(3) {
   top: -120px;
 }
-.about-galery img:nth-of-type(4) {
+.about-galery a:nth-of-type(4) {
   top: -180px;
+}
+.about-galery img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
 }
 
 .teaching {
@@ -2401,7 +2407,7 @@ footer .phone b {
             justify-content: space-between;
     padding: 0 10px;
   }
-  .about-galery img {
+  .about-galery a {
     margin-bottom: 10px;
     width: 49%;
     position: static;

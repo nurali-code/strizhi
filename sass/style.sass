@@ -153,12 +153,9 @@
         justify-content: center
         gap: 1%
         padding: 200px 0 120px
-        img
+        a
             width: 19%
-            // height: 550px
-            object-fit: cover
-            display: block
-            vertical-align: bottom
+            display: inline-block
             position: relative
             &:nth-of-type(1)
                 top: -60px
@@ -166,6 +163,10 @@
                 top: -120px
             &:nth-of-type(4)
                 top: -180px
+        img
+            width: 100%
+            object-fit: cover
+            vertical-align: bottom
 
 .teaching
     padding: 130px 0
@@ -506,7 +507,7 @@
             gap: 0
             justify-content: space-between
             padding: 0 10px
-            img
+            a
                 margin-bottom: 10px
                 width: 49%
                 position: static
@@ -553,6 +554,7 @@
                 left: -40%
                 top: -50px
                 height: 100px
+
             &::after
                 top: auto
                 bottom: -50px
@@ -572,13 +574,13 @@
             width: 80vw
             font-size: 14px
             padding: 25px 17px
-            &-wrap 
+            &-wrap
                 margin-bottom: 60px
 
             &__headline
                 margin-bottom: 25px
 
-        form 
+        form
             width: 100%
             &:first-child
                 margin-bottom: 30px

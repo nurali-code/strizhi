@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $('.btn-menu').on('click', function () {
         $(this).toggleClass('active');
-        $('header').toggleClass('active');
+        $('header, body').toggleClass('active');
     })
 
     /*---------------------------------------------------end*/
@@ -42,53 +42,6 @@ $(document).ready(function () {
         } else {
             $(".scroll-up").fadeOut(300);
         }
-    });
-    /*---------------------------------------------------end*/
-
-    function hideModals() {
-        $('.modal').fadeOut();
-        $('.modal, body, [data-modal]').removeClass('active');
-    };
-
-    /*---------------------------------------------------end*/
-
-
-    $(function () {
-        function showModal(id) {
-            if ($(id).hasClass('active')) {
-                $(id).fadeOut(300)
-                $(id).removeClass('active');
-                $('body').removeClass('active');
-            } else {
-                $(id).addClass('active')
-                $('body').addClass('active');
-                $(id).fadeIn(300);
-            }
-        }
-        $('[data-modal]').on('click', function (e) {
-            e.preventDefault();
-            $(this).toggleClass('active')
-            showModal('#' + $(this).attr("data-modal"));
-        });
-
-        $('.modal-close').on('click', () => {
-            hideModals();
-        });
-
-        $(document).on('click', function (e) {
-            if (!(
-                ($(e.target).parents('.modal-content').length) ||
-                ($(e.target).parents('.open-modal').length) ||
-                ($(e.target).parents('.nav').length) ||
-                ($(e.target).parents('.btn-menu').length) ||
-                ($(e.target).hasClass('nav')) ||
-                ($(e.target).hasClass('btn-menu')) ||
-                ($(e.target).hasClass('btn')) ||
-                ($(e.target).hasClass('modal-content'))
-            )) {
-                hideModals();
-            }
-        });
     });
     /*---------------------------------------------------end*/
 

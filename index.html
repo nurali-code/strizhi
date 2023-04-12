@@ -8,7 +8,7 @@
     <title> Аэродром "Стрижи" - летняя школа авиации и место для креативных фотосессий</title>
     <meta name="description"
         content="Аэродром «Стрижи» - место для знакомства с авиацией и раскрытия потенциала. Мы предлагаем обучение пилотированию легких самолетов, квалифицированных инструкторов и современное оборудование. Присоединяйтесь к нам и откройте захватывающий мир авиации! Мы также организуем авиашоу, выставки и конференции.">
-        
+
     <meta property="twitter:image" content="https://nurali-code.github.io/strizhi/img/io.jpg">
     <meta property="og:image" content="https://nurali-code.github.io/strizhi/img/io.jpg" />
     <meta property="og:image:url" content="https://nurali-code.github.io/strizhi/img/io.jpg" />
@@ -31,6 +31,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&family=Noto+Serif:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 </head>
 
 <body>
@@ -115,11 +116,11 @@
             </div>
         </div>
         <div class="about-galery">
-            <img loading="lazy" src="img/about-1.jpg" alt="img">
-            <img loading="lazy" src="img/about-2.jpg" alt="img">
-            <img loading="lazy" src="img/about-3.jpg" alt="img">
-            <img loading="lazy" src="img/about-4.jpg" alt="img">
-            <img loading="lazy" src="img/about-5.jpg" alt="img">
+            <a href="img/about-1.jpg" data-fancybox="gallery"><img loading="lazy" src="img/about-1.jpg" alt="img"></a>
+            <a href="img/about-2.jpg" data-fancybox="gallery"><img loading="lazy" src="img/about-2.jpg" alt="img"></a>
+            <a href="img/about-3.jpg" data-fancybox="gallery"><img loading="lazy" src="img/about-3.jpg" alt="img"></a>
+            <a href="img/about-4.jpg" data-fancybox="gallery"><img loading="lazy" src="img/about-4.jpg" alt="img"></a>
+            <a href="img/about-5.jpg" data-fancybox="gallery"><img loading="lazy" src="img/about-5.jpg" alt="img"></a>
         </div>
         <div class="container wrap">
             <p class="col">
@@ -215,10 +216,18 @@
         <h2 class="container">Фотосессия В Аэродромe</h2>
 
         <div class="slider">
-            <div class="slider-item"><img loading="lazy" src="img/slide-1.jpg" alt="img"></div>
-            <div class="slider-item"><img loading="lazy" src="img/slide-2.jpg" alt="img"></div>
-            <div class="slider-item"><img loading="lazy" src="img/slide-3.jpg" alt="img"></div>
-            <div class="slider-item"><img loading="lazy" src="img/slide-4.jpg" alt="img"></div>
+            <div class="slider-item">
+                <a href="img/slide-1.jpg" data-fancybox="slider"><img loading="lazy" src="img/slide-1.jpg" alt="img"></a>
+            </div>
+            <div class="slider-item">
+                <a href="img/slide-2.jpg" data-fancybox="slider"><img loading="lazy" src="img/slide-2.jpg" alt="img"></a>
+            </div>
+            <div class="slider-item">
+                <a href="img/slide-3.jpg" data-fancybox="slider"><img loading="lazy" src="img/slide-3.jpg" alt="img"></a>
+            </div>
+            <div class="slider-item">
+                <a href="img/slide-4.jpg" data-fancybox="slider"><img loading="lazy" src="img/slide-4.jpg" alt="img"></a>
+            </div>
         </div>
 
         <h3 class="zone__headline">Фотозоны аэродрома</h3>
@@ -376,6 +385,7 @@
     <script src="./js/slick.min.js" defer></script>
     <script src="./js/jquery.inputmask.min.js" defer></script>
     <script src="./js/scripts.js?ver=8910" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 </body>
 
