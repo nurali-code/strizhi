@@ -165,8 +165,9 @@
                 top: -180px
         img
             width: 100%
+            height: 100%
             object-fit: cover
-            vertical-align: bottom
+            object-position: center center
 
 .teaching
     padding: 130px 0
@@ -385,7 +386,7 @@
             &::before
                 display: none
 
-        &__plane
+        &__plane, picture
             display: none
 
         .features
@@ -511,6 +512,8 @@
                 margin-bottom: 10px
                 width: 49%
                 position: static
+                &:last-child
+                    width: 100%
 
     .teaching
         padding: 100px 0 60px

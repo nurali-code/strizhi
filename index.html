@@ -217,16 +217,39 @@
 
         <div class="slider">
             <div class="slider-item">
-                <a href="img/slide-1.jpg" data-fancybox="slider"><img loading="lazy" src="img/slide-1.jpg" alt="img"></a>
+                <a href="img/slide-1.jpg" data-fancybox="slider">
+                    <img loading="lazy" src="img/slide-1.jpg" alt="img">
+                </a>
             </div>
             <div class="slider-item">
-                <a href="img/slide-2.jpg" data-fancybox="slider"><img loading="lazy" src="img/slide-2.jpg" alt="img"></a>
+                <a href="img/slide-2.jpg" data-fancybox="slider">
+                    <img loading="lazy" src="img/slide-2.jpg" alt="img">
+                </a>
             </div>
             <div class="slider-item">
-                <a href="img/slide-3.jpg" data-fancybox="slider"><img loading="lazy" src="img/slide-3.jpg" alt="img"></a>
+                <a href="img/slide-3.jpg" data-fancybox="slider">
+                    <img loading="lazy" src="img/slide-3.jpg" alt="img">
+                </a>
             </div>
             <div class="slider-item">
-                <a href="img/slide-4.jpg" data-fancybox="slider"><img loading="lazy" src="img/slide-4.jpg" alt="img"></a>
+                <a href="img/slide-4.jpg" data-fancybox="slider">
+                    <img loading="lazy" src="img/slide-4.jpg" alt="img">
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="img/slide-5.jpg" data-fancybox="slider">
+                    <img loading="lazy" src="img/slide-5.jpg" alt="img">
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="img/slide-6.jpg" data-fancybox="slider">
+                    <img loading="lazy" src="img/slide-6.jpg" alt="img">
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="img/slide-7.jpg" data-fancybox="slider">
+                    <img loading="lazy" src="img/slide-7.jpg" alt="img">
+                </a>
             </div>
         </div>
 
@@ -289,19 +312,19 @@
                 </ul>
             </div>
             <div class="col wrap">
-                <form action="#">
+                <form action="./smart.php" method="post">
                     <h4>Забронировать фотосессию</h4>
-                    <input type="text" required placeholder="Ваше имя">
-                    <input type="tel" required placeholder="Номер телефона">
-                    <input type="number" required placeholder="Количество часов">
-                    <button type="submit" class="btn white">подать заявку</button>
+                    <input type="text" name="name" required placeholder="Ваше имя">
+                    <input type="tel" name="phone_number" required placeholder="Номер телефона">
+                    <input type="number" name="hours" required placeholder="Количество часов">
+                    <button type="submit" class="btn white">Подать заявку</button>
                     <i>
                         Пожалуйста, подтверждайте бронирование сделанное менее чем за 3-е суток до начала фотосессии,
                         так
                         как самолет и площадка могут быть не готовы к использованию.
                     </i>
                 </form>
-                <form action="#">
+                <form action="./smart.php" method="post">
                     <h4>Отменить бронирования</h4>
                     <i>
                         Информируем вас, что отмена записи менее чем за 48 часа до начала съёмок, равна полной стоимости
@@ -309,8 +332,8 @@
                         планируют время в своем плотном графике владелец самолета, диспетчер площадки, а также
                         сопровождающие, которые следят за вашей безопасностью.
                     </i>
-                    <input type="text" required placeholder="Ваше имя">
-                    <input type="tel" required placeholder="Номер телефона">
+                    <input type="text" name="name" required placeholder="Ваше имя">
+                    <input type="tel" name="phone_number" required placeholder="Номер телефона">
                     <button type="submit" class="btn black">Отменить</button>
                 </form>
 
@@ -329,7 +352,7 @@
         </div>
         <iframe loading="lazy"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3Abd3118c33ab445fa7d042122a6d2b2a6d26fa0f69be7592f5d5be0440296ccdf&amp;source=constructor"
-            width="100%" height="519" frameborder="0"></iframe>
+            width="100%" height="600"></iframe>
         <div class="container wrap">
             <div class="col">
                 <a href="#main" class="logo">

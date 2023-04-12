@@ -64,9 +64,7 @@ $(document).ready(function () {
         }).done(function () {
             $('form .btn').removeClass('loading');
             $('form').trigger('reset');
-            $('.modal').fadeOut();
-            $('#modal-thanks').fadeIn();
-            setTimeout(() => { hideModals() }, 6000)
+            alert('Спасибо за заявку. Ожидайте с вами свяжется специалист!');
         }); return false;
     });
 });

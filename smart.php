@@ -1,8 +1,8 @@
 <?php
 $name = $_POST['name'];
 $phone = $_POST['phone_number'];
-$message = $_POST['message'];
 $service = $_POST['service'];
+$hours = $_POST['hours'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -19,7 +19,7 @@ $mail->SMTPSecure = 'ssl'; // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to
 
 $mail->setFrom('alicia.mir0nova@yandex.ru', 'Алиса'); // От кого письмо 
-$mail->addAddress('eastashev@yandex.ru'); // Add a recipient
+// $mail->addAddress('eastashev@yandex.ru'); // Add a recipient
 $mail->addAddress('nur3.dav.97@gmail.com');  // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -44,8 +44,8 @@ $mail->Body = '
 <td style="border: 1px solid #bdbdbd; padding: 5px;">' . $service . '</td>
 </tr>
 <tr>
-	<td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Обращение от клиента</td>
-	<td style="border: 1px solid #bdbdbd; padding: 5px;">' . $message . '</td>
+	<td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Количество часов</td>
+	<td style="border: 1px solid #bdbdbd; padding: 5px;">' . $hours . '</td>
 </tr>
 </table>';
 
