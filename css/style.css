@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 91px;
-  line-height: 124px;
+  line-height: 140%;
   text-transform: uppercase;
 }
 
@@ -769,7 +769,7 @@ textarea {
 }
 @media screen and (max-width: 1100px) {
   h1 {
-    font-size: 55px;
+    font-size: 50px;
   }
   h3 {
     font-size: 26px;
@@ -794,6 +794,9 @@ textarea {
   .container {
     padding: 0 16px;
   }
+  h1 {
+    font-size: 31px;
+  }
   h2 {
     font-size: 26px;
     margin-bottom: 20px;
@@ -801,6 +804,7 @@ textarea {
   p, li {
     font-size: 14px;
     line-height: 140%;
+    margin-bottom: 20px;
   }
   h3 {
     font-size: 20px;
@@ -813,14 +817,15 @@ textarea {
     font-size: 16px;
   }
   .btn-menu {
-    width: 40px;
+    width: 41px;
     height: 36px;
   }
-  .btn-menu span::before {
-    top: -8px;
+  .btn-menu span {
+    width: 100%;
+    left: 0;
   }
-  .btn-menu span::after {
-    top: 8px;
+  .btn-menu span::before, .btn-menu span::after {
+    right: 0;
   }
   input,
 textarea,
@@ -846,7 +851,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 9999;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-transition: background-color ease 0.3s;
   -o-transition: background-color ease 0.3s;
@@ -887,6 +892,9 @@ header .nav a:hover {
   color: #000;
   background-color: #E9F8F9;
 }
+header .nav .hidden {
+  display: none;
+}
 header .phone {
   margin-top: 10px;
 }
@@ -926,7 +934,55 @@ header .btn-menu {
     width: 100%;
   }
   header .nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 100vh;
+    width: 300px;
+    max-width: 80%;
+    background-color: #fff;
+    display: block;
+    margin: 0;
+    padding: 70px 0 0;
+    visibility: hidden;
+    -webkit-transform: translateX(-100%);
+       -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+         -o-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+    -webkit-transition: all 0.5s cubic-bezier(0.4, -0.02, 0, 0.96);
+    -o-transition: all 0.5s cubic-bezier(0.4, -0.02, 0, 0.96);
+    -moz-transition: all 0.5s cubic-bezier(0.4, -0.02, 0, 0.96);
+    transition: all 0.5s cubic-bezier(0.4, -0.02, 0, 0.96);
+  }
+  header .nav li {
+    padding: 0;
+  }
+  header .nav a {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    padding: 12px;
+  }
+  header .nav .hidden {
+    display: block;
+    padding: 10px 0 0;
+  }
+  header .nav .hidden .phone {
+    width: unset;
+    height: unset;
+    text-align: left;
+  }
+  header .nav .hidden .phone b {
+    font-size: 20px;
+    color: #362FD9;
+  }
+  header .nav .hidden .phone span {
+    color: #000;
+    font-size: 14px;
   }
   header .phone {
     margin: 0 30px 0 auto;
@@ -938,17 +994,59 @@ header .btn-menu {
     display: inline-block;
     z-index: 9999999;
   }
+  header.active .nav {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+       -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+         -o-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 700px) {
   header {
-    padding: 16px 0;
+    padding: 8px 0 10px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(4.5px);
+            backdrop-filter: blur(4.5px);
   }
   header .logo {
-    max-width: 160px;
+    max-width: 130px;
     margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  header .container {
+    padding: 8px 16px 4px;
   }
   header .phone {
-    display: none;
+    display: inline-block;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/phone.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
+  }
+  header .phone span, header .phone b {
+    font-size: 1px;
+    color: transparent;
+  }
+  header .btn-menu {
+    margin-top: 4px;
   }
 }
 
@@ -1291,6 +1389,21 @@ footer .phone b {
     max-width: 100%;
   }
 }
+@media screen and (max-width: 700px) {
+  footer .address {
+    max-width: 90%;
+    top: -100px;
+    left: 16px;
+    padding: 30px 18px;
+  }
+  footer .address h2 {
+    margin-bottom: 10px;
+  }
+  footer .address address {
+    font-size: 14px;
+  }
+}
+
 .developt {
   background-color: #fff;
   text-align: center;
@@ -2108,10 +2221,10 @@ footer .phone b {
 }
 @media screen and (max-width: 1100px) {
   .main {
-    -webkit-background-size: auto 70%;
-       -moz-background-size: auto 70%;
-         -o-background-size: auto 70%;
-            background-size: auto 70%;
+    -webkit-background-size: auto 75%;
+       -moz-background-size: auto 75%;
+         -o-background-size: auto 75%;
+            background-size: auto 75%;
     background-position: top center;
   }
   .main::after {
@@ -2123,12 +2236,12 @@ footer .phone b {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    text-shadow: 2px 2px 0px #362fd9, 3px 3px 0px #000000;
+    text-shadow: 1px 1px 0px #362fd9, 3px 3px 0px #000000;
   }
   .main .container {
-    padding-top: 120px;
+    padding-top: 100px;
     height: unset;
-    min-height: 500px;
+    min-height: 600px;
   }
   .main__text {
     width: 95%;
@@ -2147,18 +2260,26 @@ footer .phone b {
   .main .features {
     position: relative;
     max-width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     right: auto;
     bottom: auto;
     top: -40px;
     margin: 0 auto;
     text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
   .main .features-item {
     display: inline-block;
     vertical-align: top;
     max-width: 160px;
-    margin: 0 7px !important;
+    margin: 0 !important;
     padding: 11px 14px 18px;
     position: static !important;
   }
@@ -2232,6 +2353,36 @@ footer .phone b {
   }
 }
 @media screen and (max-width: 700px) {
+  .main {
+    -webkit-background-size: auto 53%;
+       -moz-background-size: auto 53%;
+         -o-background-size: auto 53%;
+            background-size: auto 53%;
+    background-position: top 71px center;
+    margin-bottom: 60px;
+  }
+  .main::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 71px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #76b0d6;
+  }
+  .main .container {
+    padding-top: 100px;
+    min-height: 400px;
+  }
+  .main__text {
+    padding: 30px 20px 60px;
+  }
+  .main h1 {
+    max-width: 400px;
+    text-shadow: 1px 1px 0px #362fd9, 2px 2px 0px #000000;
+  }
   .about .wrap {
     display: block;
   }
@@ -2255,6 +2406,9 @@ footer .phone b {
     width: 49%;
     position: static;
   }
+  .teaching {
+    padding: 100px 0 60px;
+  }
   .teaching .col.wrap {
     display: block;
   }
@@ -2271,9 +2425,59 @@ footer .phone b {
   .teaching form {
     border: none;
   }
+  .teaching .item__num,
+.teaching .item img {
+    width: 75px;
+    min-width: 75px;
+    margin-right: 15px;
+  }
+  .teaching .item__num {
+    font-size: 68px;
+  }
+  .teaching .item__text {
+    font-weight: 500;
+  }
+  .teaching .item__text i {
+    line-height: 125%;
+  }
+  .photoshoot {
+    padding-bottom: 140px;
+  }
+  .photoshoot .slider::before, .photoshoot .slider::after {
+    width: 180%;
+    left: -40%;
+    top: -50px;
+    height: 100px;
+  }
+  .photoshoot .slider::after {
+    top: auto;
+    bottom: -50px;
+  }
   .photoshoot .slider-item {
     min-width: unset;
     width: 90vw;
+    max-height: 88vh;
     margin: 0 4px;
+  }
+  .photoshoot .wrap .col.wrap {
+    display: block;
+  }
+  .photoshoot .zone {
+    min-width: 80vw;
+    width: 80vw;
+    font-size: 14px;
+    padding: 25px 17px;
+  }
+  .photoshoot .zone-wrap {
+    margin-bottom: 60px;
+  }
+  .photoshoot .zone__headline {
+    margin-bottom: 25px;
+  }
+  .photoshoot form {
+    width: 100%;
+  }
+  .photoshoot form:first-child {
+    margin-bottom: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

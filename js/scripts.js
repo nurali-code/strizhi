@@ -5,6 +5,13 @@ $(document).ready(function () {
     // });
     /*---------------------------------------------------end*/
 
+    $('.btn-menu').on('click', function () {
+        $(this).toggleClass('active');
+        $('header').toggleClass('active');
+    })
+
+    /*---------------------------------------------------end*/
+
     $('a[href*="#"]').on('click', function (e) {
         e.preventDefault();
         hideModals();
@@ -14,24 +21,6 @@ $(document).ready(function () {
             $($(this).attr('href')).removeClass('point')
         }, 1000)
     })
-    /*---------------------------------------------------end*/
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() >= 500) {
-
-            // $("header").addClass('fixed');
-            $(".scroll-up").fadeIn(300);
-        } else {
-            // $("header").removeClass('fixed');
-            $(".scroll-up").fadeOut(300);
-        }
-    });
-    /*---------------------------------------------------end*/
-
-    function hideModals() {
-        $('.modal').fadeOut();
-        $('.modal, body, [data-modal]').removeClass('active');
-    };
     /*---------------------------------------------------end*/
     $('.slider').slick({
         dots: false,
@@ -44,7 +33,25 @@ $(document).ready(function () {
         slidesToScroll: 1,
         variableWidth: true,
     });
+
     /*---------------------------------------------------end*/
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 500) {
+            $(".scroll-up").fadeIn(300);
+        } else {
+            $(".scroll-up").fadeOut(300);
+        }
+    });
+    /*---------------------------------------------------end*/
+
+    function hideModals() {
+        $('.modal').fadeOut();
+        $('.modal, body, [data-modal]').removeClass('active');
+    };
+
+    /*---------------------------------------------------end*/
+
 
     $(function () {
         function showModal(id) {
