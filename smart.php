@@ -40,7 +40,7 @@ $mail->Body = '
 	<td style="border: 1px solid #bdbdbd; padding: 5px;">' . $phone . '</td>
 </tr>
 <tr>
-<td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Услуга</td>
+<td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Форма</td>
 <td style="border: 1px solid #bdbdbd; padding: 5px;">' . $service . '</td>
 </tr>
 <tr>
