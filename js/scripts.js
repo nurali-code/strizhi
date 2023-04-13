@@ -16,10 +16,6 @@ $(document).ready(function () {
         e.preventDefault();
         hideModals();
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 40, }, 300,)
-        $($(this).attr('href')).addClass('point')
-        setTimeout(() => {
-            $($(this).attr('href')).removeClass('point')
-        }, 1000)
     })
     /*---------------------------------------------------end*/
     $('.slider').slick({
