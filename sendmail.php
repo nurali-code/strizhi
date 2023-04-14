@@ -42,7 +42,7 @@ try {
     if (!empty($hours)) {
         $hours_row = '
         <tr>
-            <td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Обращение от клиента</td>
+            <td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Количество часов</td>
             <td style="border: 1px solid #bdbdbd; padding: 5px;">' . $hours . '</td>
         </tr>';
     } else {

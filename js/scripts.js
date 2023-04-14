@@ -54,7 +54,7 @@ $(document).ready(function () {
         $.ajax({
             type: "post",
             method: 'post',
-            url: "../smart.php",
+            url: "../sendmail.php",
             data: $(this).serialize()
         }).done(function () {
             $('form .btn').removeClass('loading');
