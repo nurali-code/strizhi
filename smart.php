@@ -1,26 +1,27 @@
 <?php
 $name = $_POST['name'];
 $phone = $_POST['phone_number'];
-$service = $_POST['service'];
+$type = $_POST['type'];
 $hours = $_POST['hours'];
+$service = $_POST['service'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+// $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$mail->isSMTP(); // Set mailer to use SMTP
-$mail->Host = 'smtp.yandex.ru'; // Specify main and backup SMTP servers
-$mail->SMTPAuth = true; // Enable SMTP authentication
-$mail->Username = 'alicia.mir0nova@yandex.ru'; // Наш логин
-$mail->Password = 'JR+Sq2$4h;MR-X8'; // Наш пароль от ящика
-$mail->SMTPSecure = 'ssl'; // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465; // TCP port to connect to
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com'; 
+$mail->SMTPAuth = true;
+$mail->Username = 'alinovasamira8@gmail.com'; //реальная gmail почта
+$mail->Password = 'Uim$nt98CTYe!RB'; //реальный пароль от этой почты
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 587;
 
-$mail->setFrom('alicia.mir0nova@yandex.ru', 'Алиса'); // От кого письмо 
-// $mail->addAddress('eastashev@yandex.ru'); // Add a recipient
-$mail->addAddress('nur3.dav.97@gmail.com');  // Name is optional
+$mail->setFrom('alinovasamira8@gmail.com'); //повторяем ту же gmail почту 
+$mail->addAddress('nur3.dav.97@gmail.com'); // Add a recipient
+// $mail->addAddress('eastashev@yandex.ru');  // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
@@ -40,11 +41,15 @@ $mail->Body = '
 	<td style="border: 1px solid #bdbdbd; padding: 5px;">' . $phone . '</td>
 </tr>
 <tr>
-<td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Форма</td>
+<td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Услуга</td>
 <td style="border: 1px solid #bdbdbd; padding: 5px;">' . $service . '</td>
 </tr>
 <tr>
-	<td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Количество часов</td>
+	<td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Обращение от клиента</td>
+	<td style="border: 1px solid #bdbdbd; padding: 5px;">' . $type . '</td>
+</tr>
+<tr>
+	<td style="border: 1px solid #bdbdbd; padding: 5px; width: 180px">Обращение от клиента</td>
 	<td style="border: 1px solid #bdbdbd; padding: 5px;">' . $hours . '</td>
 </tr>
 </table>';
@@ -53,6 +58,7 @@ $mail->AltBody = 'Это альтернативный текст';
 
 if (!$mail->send()) {
 	echo 'Error';
+	echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
 	echo 'Good!';
 }

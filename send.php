@@ -1,27 +1,41 @@
 <?php
-// Получение значений полей формы
+// Получение данных из POST-запроса
 $name = $_POST['name'];
-$phone_number = $_POST['phone_number'];
+$phone = $_POST['phone_number'];
 $service = $_POST['service'];
-$message = $_POST['message'];
+$type = $_POST['type'];
+$hours = $_POST['hours'];
 
-// Формирование заголовков письма
-$to = 'nur3.dav.97@gmail.com';
-$subject = 'Новое сообщение с сайта';
-$headers = 'From: ' . $name . ' <' . $email . '>' . "\r\n" .
-            'Reply-To: ' . $email . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
-
-// Формирование тела письма
-$body = "Имя: $name\n" .
-        "Телефон: $phone_number\n" .
-        "Услуга: $service\n" .
-        "Сообщение:\n$message";
-
-// Отправка письма
-if (mail($to, $subject, $body, $headers)) {
-    echo 'Сообщение отправлено';
+// Определение адреса получателя
+if ($type == 1) {
+    $to = 'log_davlatov97@mail.ru';
+} elseif ($type == 2) {
+    $to = 'nur3.dav.97@gmail.com';
 } else {
-    echo 'Сообщение не отправлено';
+    // Если значение $type не равно 1 или 2, используем адрес по умолчанию
+    $to = 'nur3.dav.97@gmail.com';
 }
-?>
+
+// Формирование сообщения
+$message = "Услуга: $service\n";
+$message .= "Имя: $name\n";
+$message .= "Телефон: $phone\n";
+if (!empty($hours)) {
+    $message .= "Часы: $hours\n";
+}
+
+
+// Отправка сообщения на электронную почту
+$subject = 'Новое сообщение с сайта';
+$headers = 'From: aerobarnaul@example.com' . "\r\n" .
+    'Reply-To: aerobarnaul@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
+
+$mail_sent = mail($to, $subject, $message, $headers);
+if (!$mail_sent) {
+    echo "Email not sent";
+} else {
+    echo "Email sent";
+}

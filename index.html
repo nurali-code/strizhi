@@ -155,7 +155,7 @@
                 <p>
                     Сегодня на аэродроме базируется 10 воздушных судов. Владельцам воздушных судов и предпринимателям,
                     желающим построить на территории аэродрома ангар или офис, мы предлагаем земельные участки с выходом
-                    на взлетно-посадочную полосу в собственность или длительную аренду.
+                    на взлетно-посадочную полосу в длительную аренду.
                 </p>
                 <p>
                     <strong>
@@ -220,12 +220,13 @@
                         <span>15 наземных часов</span>
                     </p>
                 </div>
-                <form class="box">
+                <form action="./sendmail.php" method="post" class="box">
                     <h3>Подать завку <br> на обучение</h3>
+                    <input type="hidden" name="type" value="2">
                     <input type="hidden" name="service" value="Завка на обучение">
-                    <input type="text" required placeholder="Ваше имя">
-                    <input type="tel" required placeholder="Номер телефона">
-                    <button type="submit" class="btn white">подать заявку</button>
+                    <input type="text" name="name" required placeholder="Ваше имя">
+                    <input type="tel" name="phone_number" required placeholder="Номер телефона">
+                    <button type="submit" class="btn white">Подать заявку</button>
                 </form>
             </div>
         </div>
@@ -335,8 +336,9 @@
                 </ul>
             </div>
             <div class="col wrap">
-                <form action="./smart.php" method="post">
+                <form action="./sendmail.php" method="post">
                     <h4>Забронировать фотосессию</h4>
+                    <input type="hidden" name="type" value="1">
                     <input type="hidden" name="service" value="Бронирование фотосессии">
                     <input type="text" name="name" required placeholder="Ваше имя">
                     <input type="tel" name="phone_number" required placeholder="Номер телефона">
@@ -348,8 +350,9 @@
                         как самолет и площадка могут быть не готовы к использованию.
                     </i>
                 </form>
-                <form action="./smart.php" method="post">
+                <form action="./sendmail.php" method="post">
                     <h4>Отменить бронирования</h4>
+                    <input type="hidden" name="type" value="1">
                     <input type="hidden" name="service" value="Отмена бронирование фотосессии">
                     <i>
                         Информируем вас, что отмена записи менее чем за 48 часа до начала съёмок, равна полной стоимости
@@ -387,7 +390,7 @@
                     Все права защищены
                 </p>
             </div>
-            <div class="col">
+            <div class="col" id="contacts">
                 <h3>Контакты</h3>
                 <a href="tel:89050802341" class="phone">
                     <span>Телефон для справок:</span>
@@ -404,12 +407,13 @@
                     <a href="#about">О нас</a>
                     <a href="#teaching">Обучение</a>
                     <a href="#photoshoot">Фотосессия</a>
-                    <a href="#address">Адресс</a>
+                    <a href="#address">Адрес</a>
                 </nav>
             </div>
             <div class="col pop">
                 <h4>Хотите задать вопрос?</h4>
-                <form action="./smart.php" method="post">
+                <form action="./sendmail.php" method="post">
+                    <input type="hidden" name="type" value="2">
                     <input type="hidden" name="service" value="Заявка на обратный звонок!">
                     <input type="tel" name="phone_number" placeholder="Номер телефона" required>
                     <button class="btn" type="submit"></button>
@@ -432,7 +436,7 @@
     <!-- <script src="./js/aos.js" defer></script> -->
     <script src="./js/slick.min.js" defer></script>
     <script src="./js/jquery.inputmask.min.js" defer></script>
-    <script src="./js/scripts.js?ver=8910" defer></script>
+    <script src="./js/scripts.js?ver=1234" defer></script>
     <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 </body>
