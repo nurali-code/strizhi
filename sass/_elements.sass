@@ -265,6 +265,48 @@ select
         color: rgba(#000 , .6)
         font-weight: 300
 
+.inp
+    &-wrap
+        position: relative
+
+    &-checkbox
+        margin-bottom: 14px
+        position: relative !important
+        label
+            position: relative !important
+            padding: 0 0 0 26px
+            margin: 0
+            color: inherit
+            font-size: 11px !important
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                width: 14px
+                height: 14px
+                left: 0
+                top: 50%
+                margin-top: -7px
+                border: 2px solid rgba(#000, .5)
+
+            a
+                color: $prime !important
+                text-decoration: underline
+
+        input
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 14px
+            opacity: 0
+            z-index: -1
+            &:checked ~ label::before
+                background-image: url('../img/check.svg')
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: 100% auto
+
 label
     color: $black
     display: block

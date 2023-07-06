@@ -12,10 +12,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#362fd9">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&family=Noto+Serif:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css?ver=3456">
+    <link rel="stylesheet" href="./css/style.css?ver=111213">
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
 </head>
 
@@ -84,6 +86,22 @@
 
         </div>
     </main>
+
+    <section class="agricultural">
+        <div class="container">
+            <h2>эфективная обработка сельхоз полей аградронами и самолётами</h2>
+            <div class="pop wrap">
+                <p class="text">
+                    Специализированные авиационные услуги для сельскохозяйственной обработки полей. Мы используем самолеты с высокоточным оборудованием для быстрой и точной обработки полей с высоты, улучшая качество посевов и повышая урожайность.
+                </p>
+                <div class="wrap">
+                    <p class="item">Быстрая и эффективная обработка больших площадей с высоты.</p>
+                    <p class="item">Точное и равномерное распределение удобрений и защитных средств.</p>
+                    <p class="item">Доступ к труднодоступным участкам полей для полного охвата.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="about" id="about">
         <div class="container">
@@ -156,6 +174,35 @@
         </div>
     </section>
 
+    <section class="photoshoot">
+        <h3 class="zone__headline">Наши ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</h3>
+        <div class="wrap zone-wrap">
+            <p class="zone">
+                <b>Взлет-посадка</b>
+                <br> <br>
+                Безопасные и комфортные взлеты и посадки. Надежные маневры и удобное приземление. Доверьтесь
+                профессионалам.
+            </p>
+            <p class="zone">
+                <b>Заправка топлива АИ 95 (ML 100)</b>
+                <br> <br>
+                Надежная заправка топливом АИ 95 (ML 100) для вашего самолета. Уверенность в полете.
+            </p>
+            <p class="zone">
+                <b>Стоянка самолета</b>
+                <br> <br>
+                Безопасная и удобная стоянка для вашего самолета. Надежная охрана и защита.
+            </p>
+        </div>
+        <div class="weather wrap">
+            <img src="img/weather.svg" alt="weather">
+            <h4>Погода на аэродроме</h3>
+                <p>Будьте в курсе текущих погодных условий на нашем аэродроме. Узнайте о температуре, скорости ветра и
+                    видимости перед вашим полетом.</p>
+                <a href="https://app.weathercloud.net/d5188043698" target="_blank" class="btn">Подробнее</a>
+        </div>
+    </section>
+
     <section class="teaching" id="teaching">
         <div class="container wrap">
             <div class="col">
@@ -174,7 +221,7 @@
                     <span class="item__text">
                         Самолетов <br>
                         <i>
-                            Два 2-х местных местных Remus <br>
+                            Два 2-х местных Remus <br>
                             Два 4-х местных Cessna 182 <br>
                             Пилотажный самолёт ЯК-52 <br>
                             4-х местный самолёт Tecnam
@@ -205,6 +252,13 @@
                     <input type="hidden" name="service" value="Завка на обучение">
                     <input type="text" name="name" required placeholder="Ваше имя">
                     <input type="tel" name="phone_number" required placeholder="Номер телефона">
+                    <div class="inp-checkbox">
+                        <input type="checkbox" checked required id="check1">
+                        <label for="check1">
+                            Согласен с <a href="#">политикой конфиденциальности</a> и <a href="#">обработкой
+                                персональных данных</a>.
+                        </label>
+                    </div>
                     <button type="submit" class="btn white">Подать заявку</button>
                 </form>
             </div>
@@ -213,6 +267,51 @@
             <source srcset="./img/planes.jpg" media="(min-width: 1200px)">
             <img class="bg" src="./img/planes-mob.jpg" alt="Обучение пилотов" loading="lazy">
         </picture>
+    </section>
+
+    <section class="pricing">
+        <h2 class="container">Стоимость обучения </h2>
+        <div class="pricing-slider wrap">
+            <div class="pricing-item">
+                <p class="descr">Модуль 1 </p>
+                <h3>Теоретическая подготовка </h3>
+                <p class="pricing-item__price">85.000 рублей</p>
+            </div>
+            <div class="pricing-item">
+                <p class="descr">Модуль 2</p>
+                <h3>Уведомительный порядок </h3>
+                <p class="pricing-item__price">5.000 рублей</p>
+            </div>
+            <div class="pricing-item">
+                <h3>Наземная и тренажная подготовка </h3>
+                <p class="text">
+                    - наземная подготовка 13:30 часов <b>(600 рублей за 1 час)</b> <br>
+                    - наземная подготовка 13:30 часов <b>(600 рублей за 1 час)</b>
+                </p>
+                <p class="pricing-item__price">13.200 рублей</p>
+            </div>
+            <div class="pricing-item">
+                <h3>Летная подготовка с инструктором </h3>
+                <p class="text">
+                    - при использовании воздушного судна с предоставлением услуг пилота-инструктора –
+                    <b>20.000 рублей за 1 час x 30 часов</b>
+                </p>
+                <p class="pricing-item__price">600.000 рублей</p>
+            </div>
+            <div class="pricing-item">
+                <h3>Летная подготовка <i>(самостоятельно) </i> </h3>
+                <p class="text">
+                    - при использовании воздушного судна с предоставлением услуг пилота-инструктора –
+                    <b>15.000 рублей за 1 час x 30 часов</b>
+                </p>
+                <p class="pricing-item__price">150.000 рублей</p>
+            </div>
+        </div>
+        <p class="pricing__text container">
+            Час летной подготовки рассчитывается с момента начала движения воздушного судна по взлетно-посадочной полосе
+            с целью взлета до момента его полной остановки на взлетно-посадочной полосе после выполнения учебного
+            полета.
+        </p>
     </section>
 
     <section class="photoshoot" id="photoshoot">
@@ -322,6 +421,13 @@
                     <input type="text" name="name" required placeholder="Ваше имя">
                     <input type="tel" name="phone_number" required placeholder="Номер телефона">
                     <input type="number" name="hours" required placeholder="Количество часов">
+                    <div class="inp-checkbox">
+                        <input type="checkbox" checked required id="check2">
+                        <label for="check2">
+                            Согласен с <a href="#">политикой конфиденциальности</a> и <a href="#">обработкой
+                                персональных данных</a>.
+                        </label>
+                    </div>
                     <button type="submit" class="btn white">Подать заявку</button>
                     <i>
                         Пожалуйста, подтверждайте бронирование сделанное менее чем за 3-е суток до начала фотосессии,
@@ -341,6 +447,13 @@
                     </i>
                     <input type="text" name="name" required placeholder="Ваше имя">
                     <input type="tel" name="phone_number" required placeholder="Номер телефона">
+                    <div class="inp-checkbox">
+                        <input type="checkbox" checked required id="check3">
+                        <label for="check3">
+                            Согласен с <a href="#">политикой конфиденциальности</a> и <a href="#">обработкой
+                                персональных данных</a>.
+                        </label>
+                    </div>
                     <button type="submit" class="btn black">Отменить</button>
                 </form>
 
@@ -348,6 +461,7 @@
         </div>
 
     </section>
+
 
     <footer class="footer" id="address">
         <div class="address">
@@ -358,15 +472,17 @@
             </address>
         </div>
         <iframe loading="lazy"
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3Abd3118c33ab445fa7d042122a6d2b2a6d26fa0f69be7592f5d5be0440296ccdf&amp;source=constructor"></iframe>
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A0b7b5ebb90ce8136ad66f799768bfef3471e18a8cc8a53fc361aca25c4cd1371&amp;source=constructor"></iframe>
         <div class="container wrap">
             <div class="col">
                 <a href="#main" class="logo">
                     <img src="img/logo.png" alt="logo">
                 </a>
                 <p>
-                    © 2023 ООО «СТРИЖИ» <br>
-                    Все права защищены
+                    «СТРИЖИ» © 2023 <br>
+                    Все права защищены <br> <br>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Обработка персональных данных</a>
                 </p>
             </div>
             <div class="col" id="contacts">
@@ -391,16 +507,25 @@
             </div>
             <div class="col pop">
                 <h4>Хотите задать вопрос?</h4>
+                <i>
+                    Оставьте ваш номер и наш специалист
+                    позвонит вам!
+                </i>
                 <form action="./sendmail.php" method="post">
                     <input type="hidden" name="type" value="2">
                     <input type="hidden" name="service" value="Заявка на обратный звонок!">
-                    <input type="tel" name="phone_number" placeholder="Номер телефона" required>
-                    <button class="btn" type="submit"></button>
+                    <div class="inp-wrap">
+                        <input type="tel" name="phone_number" placeholder="Номер телефона" required>
+                        <button class="btn" type="submit"></button>
+                    </div>
+                    <div class="inp-checkbox">
+                        <input type="checkbox" checked required id="check">
+                        <label for="check">
+                            Согласен с <a href="#">политикой конфиденциальности</a> и <a href="#">обработкой
+                                персональных данных</a>.
+                        </label>
+                    </div>
                 </form>
-                <i>
-                    Если вас интересует какой либо вопрос и вы не можете дозвонится? Оставьте ваш номер и наш специалист
-                    позвонит вам!
-                </i>
             </div>
 
         </div>
@@ -414,7 +539,7 @@
     <script src="./js/jquery-3.4.1.min.js" defer></script>
     <script src="./js/slick.min.js" defer></script>
     <script src="./js/jquery.inputmask.min.js" defer></script>
-    <script src="./js/scripts.js?ver=3456" defer></script>
+    <script src="./js/scripts.js?ver=111213" defer></script>
     <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 </body>

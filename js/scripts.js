@@ -28,6 +28,27 @@ $(document).ready(function () {
         slidesToScroll: 1,
         variableWidth: true,
     });
+    $('.pricing-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        swipeToSlide: true,
+        centerMode: false,
+        slidesToScroll: 1,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                }
+            },
+        ]
+    });
 
     /*---------------------------------------------------end*/
 

@@ -220,6 +220,13 @@
             width: 100%
             margin-bottom: 10px
 
+        .inp-checkbox
+            a
+                color: #fff !important
+            label
+                &::before
+                    filter: invert(10)
+
     .item
         display: flex
         align-items: center
@@ -298,6 +305,8 @@
         &-wrap
             align-items: stretch
             justify-content: center
+            max-width: 1850px
+            margin: 0 auto
             margin-bottom: 70px
 
         &__headline
@@ -318,6 +327,7 @@
         background-color: rgba(0, 0, 0, .1)
         h4
             margin-bottom: 14px
+
         i
             display: block
             font-weight: 400
@@ -340,6 +350,161 @@
 
             i
                 margin-bottom: 0
+
+            .inp-checkbox
+                a
+                    color: #fff !important
+                label
+                    &::before
+                        filter: invert(10)
+
+        .inp-checkbox
+
+.weather
+    max-width: 1200px
+    margin: 0 auto
+    flex-wrap: nowrap
+    padding: 50px
+    background-image: url('../img/out.jpg')
+    background-repeat: no-repeat
+    background-position: bottom center
+    background-size: cover
+    position: relative
+    z-index: 1
+    color: #fff
+    &::before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        background-color: rgba(0, 0, 0, .2)
+
+    img
+        max-width: 60px
+    h4
+        font-size: 28px
+        margin: 0
+        max-width: 230px
+    p
+        max-width: 40%
+        font-size: 16px
+        margin: 0 20px 0 0
+
+.pricing
+    overflow: hidden
+    &-slider
+        padding: 0 !important
+        align-items: stretch
+        flex-wrap: nowrap
+        margin: 40px 0 40px auto
+
+    .slick
+        &-list
+            padding-left: calc( (100% - 1360px)/2 )
+        &-disabled
+            display: none !important
+
+    &__text
+        padding-right: 20%
+
+    &-item
+        display: inline-block
+        width: 415px
+        min-height: 520px !important
+        padding: 120px 44px
+        background-color: #FFFFFF
+        border: 2px solid #362FD9
+        background-image: url('../img/airplane.svg')
+        background-repeat: no-repeat
+        background-position: top 40px left 40px
+        position: relative
+        z-index: 1
+        margin: 0 10px !important
+        .descr
+            text-transform: uppercase
+            margin: 0 0 8px
+            opacity: .5
+
+        .text
+            font-size: 14px
+            margin: 0
+
+        &__price
+            font-weight: 700
+            margin: 0
+            font-size: 32px
+            line-height: 110%
+            position: absolute
+            bottom: 40px
+            right: 40px
+            text-align: right
+
+        h3
+            font-size: 28px
+
+        &:hover
+            background-color: #362FD9
+            color: #fff
+
+.agricultural
+    padding-bottom: 40px
+    min-height: 100vh
+    overflow: hidden
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    color: #fff
+    background-image: url('../img/ag.jpg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 90% auto 
+    .container
+        max-width: 1600px
+        width: 90%
+
+    h2
+        max-width: 1160px
+        margin-bottom: 40px
+
+    .pop
+        position: relative
+        z-index: 1
+        color: #fff
+        padding: 40px 0
+        &::before
+            content: ''
+            display: block
+            width: 100vw
+            height: 100%
+            position: absolute
+            z-index: -1
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            background-color: $prime
+
+        .wrap 
+            width: 67%
+            flex-wrap: nowrap
+            align-items: stretch
+    .text
+        max-width: 31%
+        font-size: 14px
+        margin: 0
+        font-weight: 400
+
+    .item 
+        padding: 30px 
+        background-color: #fff
+        font-size: 14px 
+        width: 32.5%
+        color: #000
+        margin: 0
+
 
 @import 'slick'
 
@@ -435,7 +600,7 @@
             &:first-child
                 margin-bottom: 30px
 
-            .col 
+            .col
                 margin: 0
                 display: flex
                 width: 100%
@@ -459,7 +624,7 @@
             h3
                 font-size: 22px
 
-        form 
+        form
             max-width: 100%
 
     .photoshoot
@@ -484,6 +649,22 @@
         .slider
             &-item
                 height: 700px
+
+    .weather
+        display: block
+        max-width: 800px
+        padding: 100px
+        h4,p
+            width: 100%
+            max-width: 100%
+            margin-bottom: 40px
+        h4
+            margin-bottom: 10px
+
+    .pricing
+        &-item
+            max-width: 90vw
+            margin: 0 6px !important
 
 @media screen and ( max-width: 700px )
     .main
@@ -534,7 +715,7 @@
         padding: 100px 0 60px
         .col.wrap
             display: block
-            .col 
+            .col
                 display: block
 
         .box
@@ -604,5 +785,27 @@
             width: 100%
             &:first-child
                 margin-bottom: 30px
+
+    .weather
+        display: block
+        max-width: 800px
+        padding: 50px 20px
+
+    .pricing
+        &-item
+            max-width: 90vw
+            min-height: 450px !important
+            padding: 120px 30px
+            margin: 0 6px !important
+
+            h3
+                font-size: 22px
+
+            &__price
+                right: 30px
+                font-size: 24px
+
+        &__text
+            padding-right: 16px
 
 @import 'footer'
