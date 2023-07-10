@@ -1,0 +1,70 @@
+.docs
+    h2
+        margin-bottom: 56px
+    .wrap
+        align-items: stretch
+    .item
+        position: relative
+        width: 32%
+        // border-radius: 65px
+        border: 1px solid rgba(0, 0, 0, .5)
+        background-color: #FFF
+        padding: 70px 50px 200px
+
+        i
+            font-style: normal
+            white-space: nowrap
+
+        h3
+            text-transform: none
+            font-size: 24px
+            font-weight: 700
+            line-height: 140%
+
+        p
+            font-size: 14px
+            line-height: 150%
+
+        .btn
+            position: absolute
+            left: 50px
+            bottom: 50px
+            border: 1px solid #000
+            background-color: transparent
+            box-shadow: none 
+            color: #000
+            img 
+                margin: 0 0 0 3px
+                vertical-align: -2px
+
+        &.pop
+            z-index: 111
+            box-shadow: -62px 77px 70px -52px rgba(0, 0, 0, 0.25)
+
+    @media screen and ( max-width: 1200px )
+        .item
+            width: 49%
+            padding: 50px 30px 80px
+            margin-bottom: 30px
+            &::before
+                width: 63px
+                height: 66px
+
+            h3
+                font-size: 20px
+                max-width: 90%
+                margin-bottom: 40px
+
+            .btn
+                left: 27px
+                bottom: 34px
+                padding: 20px 24px 17px
+                img
+                    display: inline-block
+                    vertical-align: middle
+                    margin-bottom: 3px
+
+    @media screen and ( max-width: 700px )
+        .item
+            width: 100%
+            min-height: unset

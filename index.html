@@ -99,9 +99,9 @@
             </div>
             <img class="agricultural__img" src="img/ag.jpg" alt="ag">
             <div class="col">
-                <p class="item">Работаем со сложными рельефами, геометрией поля </p>
                 <p class="item">Собственная техническая база БПЛА, бак для препаратов 30 л, позволяющий производить
                     опыление беспилотными летательными аппаратами до 200 га в сутки </p>
+                <p class="item">Работаем со сложными рельефами, геометрией поля </p>
                 <p class="item">Собственный авиа парк сельхоз самолетов, бак для препаратов 700 л, позволяющий
                     производить опыление от 700 га в сутки </p>
                 <p class="item">Оперативное реагирование на запрос Консультирование заказчика по химии </p>
@@ -114,6 +114,104 @@
                 <p class="item">Возможность обработки общественных зон в ночное время </p>
             </div>
         </div>
+    </section>
+
+    <section class="photoshoot">
+        <h3 class="zone__headline">Наши ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</h3>
+        <div class="wrap zone-wrap">
+            <p class="zone">
+                <b>Взлет-посадка</b>
+                <br> <br>
+                Безопасные и комфортные взлеты и посадки. Надежные маневры и удобное приземление. Доверьтесь
+                профессионалам.
+            </p>
+            <p class="zone">
+                <b>Заправка топлива АИ 95 (ML 100)</b>
+                <br> <br>
+                Надежная заправка топливом АИ 95 (ML 100) для вашего самолета. Уверенность в полете.
+            </p>
+            <p class="zone">
+                <b>Стоянка самолета</b>
+                <br> <br>
+                Безопасная и удобная стоянка для вашего самолета. Надежная охрана и защита.
+            </p>
+        </div>
+        <div class="weather wrap">
+            <img src="img/weather.svg" alt="weather">
+            <h4>Погода на аэродроме</h3>
+                <p>Будьте в курсе текущих погодных условий на нашем аэродроме. Узнайте о температуре, скорости ветра и
+                    видимости перед вашим полетом.</p>
+                <a href="https://app.weathercloud.net/d5188043698" target="_blank" class="btn">Подробнее</a>
+        </div>
+    </section>
+
+    <section class="teaching" id="teaching">
+        <div class="container wrap">
+            <div class="col">
+                <h2>Обучение пилотов</h2>
+                <p>
+                    Погружайтесь в атмосферу авиации и обучайтесь самостоятельному управлению самолетом. <br> <br>
+                    <b><a target="_blank" href="https://cpsap.ru/">Обучение производит ФГАУ ДПО «ЦП САП»</a></b>
+                </p>
+                <p class="item">
+                    <img src="img/plane.svg" alt="Собственная авиационно техническая база">
+                    <span class="item__text">Собственная авиационно техническая база</span>
+                </p>
+                <p class="item">
+                    <span class="item__num">3</span>
+                    <span class="item__text">Месяца до получения свидетельства частного пилота</span>
+                </p>
+                <p class="item">
+                    <span class="item__num">10</span>
+                    <span class="item__text">
+                        Самолетов <br>
+                        <i>
+                            Два 2-х местных Remus <br>
+                            Два 4-х местных Cessna 182 <br>
+                            Пилотажный самолёт ЯК-52 <br>
+                            4-х местный самолёт Tecnam
+                        </i>
+                    </span>
+                </p>
+            </div>
+            <div class="col wrap">
+                <div class="col">
+                    <div class="box">
+                        <h3>теоритическая подготовка</h3>
+                        <p>
+                            <img src="img/box-1.svg" alt="box">
+                            <span>182 аккадемических часов</span>
+                        </p>
+                    </div>
+                    <div class="box">
+                        <h3>лётная подготовка</h3>
+                        <p>
+                            <img src="img/box-2.svg" alt="box">
+                            <span>42 астрономических часов</span>
+                        </p>
+                    </div>
+                </div>
+                <form action="./sendmail.php" method="post" class="box">
+                    <h3>Подать завку <br> на обучение</h3>
+                    <input type="hidden" name="type" value="2">
+                    <input type="hidden" name="service" value="Завка на обучение">
+                    <input type="text" name="name" required placeholder="Ваше имя">
+                    <input type="tel" name="phone_number" required placeholder="Номер телефона">
+                    <div class="inp-checkbox">
+                        <input type="checkbox" checked required id="check1">
+                        <label for="check1">
+                            Согласен с <a href="#">политикой конфиденциальности</a> и <a href="#">обработкой
+                                персональных данных</a>.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn white">Подать заявку</button>
+                </form>
+            </div>
+        </div>
+        <picture>
+            <source srcset="./img/planes.jpg" media="(min-width: 1200px)">
+            <img class="bg" src="./img/planes-mob.jpg" alt="Обучение пилотов" loading="lazy">
+        </picture>
     </section>
 
     <section class="about" id="about">
@@ -185,101 +283,6 @@
                 </p>
             </div>
         </div>
-    </section>
-
-    <section class="photoshoot">
-        <h3 class="zone__headline">Наши ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</h3>
-        <div class="wrap zone-wrap">
-            <p class="zone">
-                <b>Взлет-посадка</b>
-                <br> <br>
-                Безопасные и комфортные взлеты и посадки. Надежные маневры и удобное приземление. Доверьтесь
-                профессионалам.
-            </p>
-            <p class="zone">
-                <b>Заправка топлива АИ 95 (ML 100)</b>
-                <br> <br>
-                Надежная заправка топливом АИ 95 (ML 100) для вашего самолета. Уверенность в полете.
-            </p>
-            <p class="zone">
-                <b>Стоянка самолета</b>
-                <br> <br>
-                Безопасная и удобная стоянка для вашего самолета. Надежная охрана и защита.
-            </p>
-        </div>
-        <div class="weather wrap">
-            <img src="img/weather.svg" alt="weather">
-            <h4>Погода на аэродроме</h3>
-                <p>Будьте в курсе текущих погодных условий на нашем аэродроме. Узнайте о температуре, скорости ветра и
-                    видимости перед вашим полетом.</p>
-                <a href="https://app.weathercloud.net/d5188043698" target="_blank" class="btn">Подробнее</a>
-        </div>
-    </section>
-
-    <section class="teaching" id="teaching">
-        <div class="container wrap">
-            <div class="col">
-                <h2>Обучение пилотов</h2>
-                <p>Погружайтесь в атмосферу авиации и обучайтесь самостоятельному управлению самолетом.</p>
-                <p class="item">
-                    <img src="img/plane.svg" alt="Собственная авиационно техническая база">
-                    <span class="item__text">Собственная авиационно техническая база</span>
-                </p>
-                <p class="item">
-                    <span class="item__num">3</span>
-                    <span class="item__text">Месяца до получения свидетельства частного пилота</span>
-                </p>
-                <p class="item">
-                    <span class="item__num">10</span>
-                    <span class="item__text">
-                        Самолетов <br>
-                        <i>
-                            Два 2-х местных Remus <br>
-                            Два 4-х местных Cessna 182 <br>
-                            Пилотажный самолёт ЯК-52 <br>
-                            4-х местный самолёт Tecnam
-                        </i>
-                    </span>
-                </p>
-            </div>
-            <div class="col wrap">
-                <div class="col">
-                    <div class="box">
-                        <h3>теоритическая подготовка</h3>
-                        <p>
-                            <img src="img/box-1.svg" alt="box">
-                            <span>182 аккадемических часов</span>
-                        </p>
-                    </div>
-                    <div class="box">
-                        <h3>лётная подготовка</h3>
-                        <p>
-                            <img src="img/box-2.svg" alt="box">
-                            <span>42 астрономических часов</span>
-                        </p>
-                    </div>
-                </div>
-                <form action="./sendmail.php" method="post" class="box">
-                    <h3>Подать завку <br> на обучение</h3>
-                    <input type="hidden" name="type" value="2">
-                    <input type="hidden" name="service" value="Завка на обучение">
-                    <input type="text" name="name" required placeholder="Ваше имя">
-                    <input type="tel" name="phone_number" required placeholder="Номер телефона">
-                    <div class="inp-checkbox">
-                        <input type="checkbox" checked required id="check1">
-                        <label for="check1">
-                            Согласен с <a href="#">политикой конфиденциальности</a> и <a href="#">обработкой
-                                персональных данных</a>.
-                        </label>
-                    </div>
-                    <button type="submit" class="btn white">Подать заявку</button>
-                </form>
-            </div>
-        </div>
-        <picture>
-            <source srcset="./img/planes.jpg" media="(min-width: 1200px)">
-            <img class="bg" src="./img/planes-mob.jpg" alt="Обучение пилотов" loading="lazy">
-        </picture>
     </section>
 
     <section class="pricing">
@@ -475,6 +478,32 @@
 
     </section>
 
+    <section class="docs">
+        <div class="container">
+            <h2>Наши <b>сертификаты</b></h2>
+            <div class="wrap">
+                <div class="item">
+                    <h3>
+                        Пользовательское <br> соглашение
+                    </h3>
+                    <a href="./coocy.docx" download class="btn">Скачать <img src="img/download.svg"
+                            alt="arrow-up-right"></a>
+                </div>
+                <div class="item pop">
+                    <h3>Обработка персональных данных</h3>
+                    <a href="./coocy.docx" download class="btn">Скачать <img src="img/download.svg"
+                            alt="arrow-up-right"></a>
+                </div>
+                <div class="item">
+                    <h3>
+                        Образовательная <br> лицензия 
+                    </h3>
+                    <a href="https://cpsap.ru/wp-content/uploads/2021/10/10316-liczenziya-09.06.2017-g.pdf" target="_blank" class="btn">Смотреть <img src="img/arrow-up-right.svg"
+                            alt="arrow-up-right"></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer" id="address">
         <div class="address">

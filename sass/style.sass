@@ -1,6 +1,7 @@
 @import 'normolize'
 @import 'elements'
 @import 'header'
+@import 'doc'
 
 .main
     background-image: url('../img/main.jpg')
@@ -186,7 +187,12 @@
         align-items: flex-start
         &:first-child
             color: #fff
-            max-width: 32%
+            max-width: 38%
+
+        a
+            text-decoration: underline
+            color: #fff
+
         .col
             max-width: 49%
             color: #000
@@ -229,8 +235,9 @@
 
     .item
         display: flex
+        margin: 0
         align-items: center
-        padding: 12px 10px 10px
+        padding: 12px 10px 
         border-bottom: 1px solid #fff
         img
             width: 90px
@@ -247,13 +254,14 @@
             text-transform: uppercase
             font-weight: bold
             margin-right: 20px
+        
         &__text
             font-weight: 600
             i
                 font-weight: normal
                 font-style: normal
                 display: block
-                font-size: 12px
+                font-size: 14px
                 line-height: 140%
 
 .photoshoot
@@ -462,7 +470,7 @@
     z-index: 1
     .container
         max-width: 1700px
-        width: 95%
+        width: 98%
         position: static
         align-items: flex-end
 
@@ -494,6 +502,7 @@
             height: 100%
             position: absolute
             z-index: -1
+            pointer-events: none
             top: 0
             left: 50%
             transform: translateX(-40%)
@@ -524,7 +533,6 @@
         margin: 0 0 10px
         border: 2px solid $prime
 
-
 @import 'slick'
 
 @media screen and ( max-width: 1500px )
@@ -542,6 +550,15 @@
                 border-right: none
             &-wrap
                 max-width: 1300px
+
+    .agricultural
+        h2
+            font-size: 32px 
+        .item
+            font-size: 13px
+
+        .text
+            font-size: 16px
 
 @media screen and ( max-width: 1100px )
     .main
@@ -685,6 +702,39 @@
             max-width: 90vw
             margin: 0 6px !important
 
+    .agricultural
+        padding-bottom: 0
+        .title 
+            margin: 0
+            width: 100%
+            &::before
+                width: 100vw
+                left: 50%
+                transform: translateX(-50%)
+        .container 
+            display: block
+            width: 100%
+            
+
+        &__img 
+            width: 100vw
+            max-width: unset
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+            display: block
+
+        .col 
+            top: -80px
+            width: 100%
+            max-width: 100%
+            display: flex
+            gap: 15px 2% 
+            flex-wrap: wrap
+
+        .item 
+            width: 49%
+
 @media screen and ( max-width: 700px )
     .main
         background-image: url('../img/main-mob.jpg')
@@ -826,5 +876,24 @@
 
         &__text
             padding-right: 16px
+
+    .agricultural
+        h2 
+            font-size: 22px
+            line-height: 150%
+            margin-bottom: 10px
+
+        &__img 
+            min-width: 600px
+
+        .col 
+            gap: 10px 0
+
+        .item
+            width: 100%
+            margin: 0
+            padding: 15px 18px
+            border-width: 1px
+            
 
 @import 'footer'
