@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&family=Noto+Serif:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css?ver=16171819">
+    <link rel="stylesheet" href="./css/style.css?ver=171819">
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
 </head>
 
@@ -89,7 +89,10 @@
 
     <section class="agricultural">
         <div class="container wrap">
-            <h2>эфективная обработка сельхоз полей аградронами и самолётами</h2>
+            <div class="wrap agricultural-title">
+                <h2>эфективная обработка сельхоз полей аградронами и самолётами</h2>
+                <button class="btn" data-modal="modal-form">Отправить заявку</button>
+            </div>
             <div class="title">
                 <p class="text">
                     Специализированные авиационные услуги для сельскохозяйственной обработки полей. Мы используем
@@ -230,6 +233,51 @@
         </picture>
     </section>
 
+    <section class="pricing">
+        <h2 class="container">Стоимость обучения </h2>
+        <div class="pricing-slider wrap">
+            <div class="pricing-item">
+                <p class="descr">Модуль 1 </p>
+                <h3>Теоретическая подготовка </h3>
+                <p class="pricing-item__price">85.000 рублей</p>
+            </div>
+            <div class="pricing-item">
+                <p class="descr">Модуль 2</p>
+                <h3>Уведомительный порядок </h3>
+                <p class="pricing-item__price">5.000 рублей</p>
+            </div>
+            <div class="pricing-item">
+                <h3>Наземная и тренажная подготовка </h3>
+                <p class="text">
+                    - наземная подготовка 13:30 часов <b>(600 рублей за 1 час)</b> <br>
+                    - наземная подготовка 13:30 часов <b>(600 рублей за 1 час)</b>
+                </p>
+                <p class="pricing-item__price">13.200 рублей</p>
+            </div>
+            <div class="pricing-item">
+                <h3>Летная подготовка с инструктором </h3>
+                <p class="text">
+                    - при использовании воздушного судна с предоставлением услуг пилота-инструктора –
+                    <b>20.000 рублей за 1 час x 30 часов</b>
+                </p>
+                <p class="pricing-item__price">600.000 рублей</p>
+            </div>
+            <div class="pricing-item">
+                <h3>Летная подготовка <i>(самостоятельно) </i> </h3>
+                <p class="text">
+                    - при использовании воздушного судна с предоставлением услуг пилота-инструктора –
+                    <b>15.000 рублей за 1 час x 30 часов</b>
+                </p>
+                <p class="pricing-item__price">150.000 рублей</p>
+            </div>
+        </div>
+        <p class="pricing__text container">
+            Час летной подготовки рассчитывается с момента начала движения воздушного судна по взлетно-посадочной полосе
+            с целью взлета до момента его полной остановки на взлетно-посадочной полосе после выполнения учебного
+            полета.
+        </p>
+    </section>
+
     <section class="photoshoot" id="photoshoot">
         <h2 class="container">Фотосессия В Аэродромe</h2>
 
@@ -330,7 +378,17 @@
                 </ul>
             </div>
             <div class="col wrap">
-                <form action="./sendmail.php" method="post">
+                <p class="row wrap">
+                    <a href="tel:+79039576639" class="phone">
+                        <span>Телефон:</span>
+                        <b>+7 903 957-66-39</b>
+                    </a>
+                    <a href="mailto:katerina_diz@mail.ru" class="phone">
+                        <span>E-mail:</span>
+                        <b>katerina_diz@mail.ru</b>
+                    </a>
+                </p>
+                <form class="pop" action="./sendmail.php" method="post">
                     <h4>Забронировать фотосессию</h4>
                     <input type="hidden" name="type" value="1">
                     <input type="hidden" name="service" value="Бронирование фотосессии">
@@ -549,12 +607,35 @@
         </div>
     </footer>
 
+    <div class="modal" id="modal-form">
+        <div class="modal-content">
+            <button class="modal-close">✕</button>
+            <h3>Отправить заявку</h3>
+            <form action="./sendmail.php" method="post">
+                <input type="hidden" name="type" value="2">
+                <input type="hidden" name="service" value="Заявка на обратный звонок!">
+                <input type="text" name="name" placeholder="Как к вам обратится?" required>
+                <input type="tel" name="phone_number" placeholder="Номер телефона" required>
+                <div class="inp-checkbox">
+                    <input type="checkbox" checked required id="check8">
+                    <label for="check8">
+                        Согласен с <a href="./policy.doc" download="Политика конфиденциальности">политикой
+                            конфиденциальности</a> и <a href="./coocy.docx" download="Обработка
+                            персональных данных">обработкой
+                            персональных данных</a>.
+                    </label>
+                </div>
+                <button class="btn" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
     <a href="#main" class="scroll-up"></a>
 
     <script src="./js/jquery-3.4.1.min.js" defer></script>
     <script src="./js/slick.min.js" defer></script>
     <script src="./js/jquery.inputmask.min.js" defer></script>
-    <script src="./js/scripts.js?ver=16171819" defer></script>
+    <script src="./js/scripts.js?ver=171819" defer></script>
     <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 </body>

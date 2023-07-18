@@ -28,7 +28,7 @@ try {
 
     $mail->setFrom('test@aerobarnaul.ru', 'АЭРОДРОМ «СТРИЖИ»');
     if ($type == 1) {
-        $mail->addAddress('tanrey1964@mail.ru', 'Получатеь');
+        $mail->addAddress('katerina_diz@mail.ru', 'Получатеь');
     } elseif ($type == 2) {
         $mail->addAddress('reizbih@mail.ru', 'Получатеь');
     } else {

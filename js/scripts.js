@@ -1,10 +1,4 @@
 $(document).ready(function () {
-    // AOS.init({
-    //     duration: 1000,
-    //     offset: 100,
-    // });
-    /*---------------------------------------------------end*/
-
     $('.btn-menu').on('click', function () {
         $(this).toggleClass('active');
         $('header, body').toggleClass('active');
@@ -28,6 +22,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         variableWidth: true,
     });
+
     $('.pricing-slider').slick({
         dots: false,
         arrows: true,
@@ -48,6 +43,40 @@ $(document).ready(function () {
                 }
             },
         ]
+    });
+
+    /*---------------------------------------------------end*/
+
+    function hideModals() {
+        $('.modal').fadeOut();
+        $('.modal, body').removeClass('active');
+    };
+    $(function () {
+        function showModal(id) {
+            $('body').addClass('active');
+            $(id).addClass('active').fadeIn(300);
+        }
+
+        $('[data-modal]').on('click', function (e) {
+            e.preventDefault();
+            showModal('#' + $(this).attr("data-modal"));
+        });
+
+        $('.modal-close').on('click', () => {
+            hideModals();
+        });
+
+        $(document).on('click', function (e) {
+            if (!(
+                ($(e.target).parents('.modal-content').length) ||
+                ($(e.target).parents('.nav').length) ||
+                ($(e.target).parents('.btn-menu').length) ||
+                ($(e.target).hasClass('btn')) ||
+                ($(e.target).hasClass('modal-content'))
+            )) {
+                hideModals();
+            }
+        });
     });
 
     /*---------------------------------------------------end*/
