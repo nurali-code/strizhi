@@ -331,13 +331,13 @@
             &.wrap
                 align-items: stretch
 
-            .row 
+            .row
                 width: 100%
                 justify-content: flex-start
                 gap: 30px
 
     .phone
-        b 
+        b
             color: #000
             text-decoration: underline
 
@@ -522,7 +522,9 @@
             background-color: $prime
 
         &-wrap
+            width: 100%
             padding: 30px 0 0
+            vertical-align: middle
             max-width: 600px
 
         &-item
@@ -768,6 +770,12 @@
 
         .item
             width: 49%
+
+        &-wrap 
+            display: block
+
+        .btn 
+            margin-top: 20px
 
 @media screen and ( max-width: 700px )
     .main

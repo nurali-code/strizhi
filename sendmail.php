@@ -29,15 +29,18 @@ try {
     $mail->setFrom('test@aerobarnaul.ru', 'АЭРОДРОМ «СТРИЖИ»');
     if ($type == 1) {
         $mail->addAddress('katerina_diz@mail.ru', 'Получатеь');
+        $mail->addAddress('alinovasamira8@gmail.com', 'Получатеь');
     } elseif ($type == 2) {
         $mail->addAddress('reizbih@mail.ru', 'Получатеь');
+        $mail->addAddress('alinovasamira8@gmail.com', 'Получатеь');
     } else {
         $mail->addAddress('reizbih@mail.ru', 'Получатеь');
+        $mail->addAddress('alinovasamira8@gmail.com', 'Получатеь');
     }
     $mail->addReplyTo('test@aerobarnaul.ru', 'АЭРОДРОМ «СТРИЖИ»');
 
     $mail->isHTML(true);
-    $mail->Subject = 'Новая заявка с сайта.';
+    $mail->Subject = 'Новая заявка с сайта АЭРОДРОМ «СТРИЖИ».';
 
     if (!empty($hours)) {
         $hours_row = '
